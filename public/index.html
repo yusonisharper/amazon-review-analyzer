@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amazon Review Analysis</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .chart-container {
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+        .chart-wrapper {
+            width: 8000px; 
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Amazon Review Analysis</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Dashboard<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reviews.html">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="keywords.html">Keyword</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <br>
+        <h1>Dashboard</h1>
+        <hr>
+        <div id="review-summary">
+            <h2>Review Summary</h2>
+            <div id="rating1-summary"></div>
+            <div id="rating2-summary"></div>
+            <div id="rating3-summary"></div>
+            <div id="rating4-summary"></div>
+            <div id="rating5-summary"></div>
+        </div>
+        <!-- First set of charts -->
+        <div class="chart-container">
+            <h2>Rating 1 Keywords</h2>
+            <div class="chart-wrapper">
+                <canvas id="chart1"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>Rating 2 Keywords</h2>
+            <div class="chart-wrapper">
+                <canvas id="chart2"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>Rating 3 Keywords</h2>
+            <div class="chart-wrapper">
+                <canvas id="chart3"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>Rating 4 Keywords</h2>
+            <div class="chart-wrapper">
+                <canvas id="chart4"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>Rating 5 Keywords</h2>
+            <div class="chart-wrapper">
+                <canvas id="chart5"></canvas>
+            </div>
+        </div>
+        
+        <!-- Second set of charts -->
+        <div class="chart-container">
+            <h2>Rating 1 Two Keywords</h2>
+            <div class="chart-wrapper">
+                <canvas id="chart6"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>Rating 2 Two Keywords</h2>
+            <div class="chart-wrapper">
+                <canvas id="chart7"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>Rating 3 Two Keywords</h2>
+            <div class="chart-wrapper">
+                <canvas id="chart8"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>Rating 4 Two Keywords</h2>
+            <div class="chart-wrapper">
+                <canvas id="chart9"></canvas>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>Rating 5 Two Keywords</h2>
+            <div class="chart-wrapper">
+                <canvas id="chart10"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

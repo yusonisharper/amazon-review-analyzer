@@ -1,0 +1,19 @@
+.pagination {
+    justify-content: center;
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* products.css */
+.review-container {
+    display: none;
+    margin-top: 10px;
+}
+.review-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
