@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Review</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Amazon Review Analysis</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Product</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="reviews.html">Review<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="keywords.html">Keyword</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <br>
+        <h1>Review</h1>
+        <h5>Want to see how review sentiment changes with rating? Search Here!</h5>
+        <hr>
+
+        <div>
+            
+            <form>
+                <label for="numberSelect">Select a rating (1 to 5):</label>
+                <select id="numberSelect">
+                    <option value="1" select>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <br><br>
+                <label for="numberInput">Enter amount:</label>
+                <input type="number" id="numberInput" value="20">
+                <br><br>
+                <button type="button" onclick="loadReviews()">Search</button>
+            </form>
+            <div class="row" id="books">
+            </div>
+            <div class="col" id="reviews">
+            </div>
+        </div>
+    </div>
+
+    <div id="editBookModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Book</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                        <form id="editForm" method="POST">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">ISBN</label>
+                                <input class="form-control" name="isbn" id="isbn">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Title</label>
+                                <input class="form-control" name="title" id="title">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Author</label>
+                                <input class="form-control" name="author" id="author">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Published Date</label>
+                                <input type="date" class="form-control" name="publish_date" id="publish_date">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Publisher</label>
+                                <input class="form-control" name="publisher" id="publisher">
+                            </div>
+                
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Number Of Pages</label>
+                                <input type="number" class="form-control" name="numOfPages" id="numOfPages">
+                            </div>
+                
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="deleteBookModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Book</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                        <form id="editForm2" method="POST">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Are you sure want to delete the following ISBN?</label>
+                                <input class="form-control" name="isbn2" id="isbn2" readonly>
+                            </div>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/reviews.js"></script>
+</body>
+
+</html>
